@@ -1,0 +1,29 @@
+body{
+    text-align: center;
+}
+
+h1 {
+    color: black;
+    margin-top: 30px;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 1.5em;
+  }
+  
+  
+.board {
+      margin: auto;
+      background-color: #768d87;
+      border-collapse: collapse;
+      border-spacing: 10px;
+      left: 50%;
+      /* top: 50%; */
+      /* transform: translate(-50%, -50%); */
+      /* position: absolute; */
+    transform: translate(48em, 10em);
+  }
+  
