@@ -85,7 +85,7 @@ function initGame() {
     //cell color back
     document.querySelector('.board').style.backgroundColor = '#768d87';
     //background pic back
-    document.querySelector('body').style.backgroundImage = "url(../img/background3.jpeg)";
+    document.querySelector('body').style.backgroundImage = "url(..img/background3.jpeg)";
 }
 
 
@@ -313,7 +313,7 @@ function gameOver(isWin) {
                 elCell.style.backgroundColor = '#b3cfc8';
             }
         }
-        document.querySelector('body').style.backgroundImage = "url(../img/burned4.jpeg)";
+        document.querySelector('body').style.backgroundImage = "url(..img/burned4.jpeg)";
     }
 }
 
