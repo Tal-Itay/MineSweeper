@@ -1,29 +1,174 @@
+*{
+  text-align: center;
+}
+
 body{
-    text-align: center;
+  background-image: url(../img/background3.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
 }
 
 h1 {
-    color: black;
-    margin-top: 30px;
+  margin-top: 30px;
+  color: black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 80px;
+  margin-bottom: 2px;
 }
 
-.cell {
-    width: 40px;
-    height: 40px;
+  .board {
+    margin: auto;
+    background-color: #768d87;
+    border-collapse: collapse;
+    border-spacing: 10px;
     text-align: center;
-    font-size: 1.5em;
   }
-  
-  
-.board {
+
+  .cell {
+      text-align: center;
+      width: 40px;
+      height: 40px;
+      border: 2px solid black;
+      font-size: 1.5em;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       margin: auto;
-      background-color: #768d87;
-      border-collapse: collapse;
-      border-spacing: 10px;
-      left: 50%;
-      /* top: 50%; */
-      /* transform: translate(-50%, -50%); */
-      /* position: absolute; */
-    transform: translate(48em, 10em);
-  }
+      text-align: center;
+      background: linear-gradient(-45deg, rgba(0,0,0,0.22), rgba(255,255,255,0.25));
+}
   
+  .board-container{
+    flex-wrap: wrap;
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    margin-top: 10px;
+    display:inline-flex;
+    text-align: center;
+  }
+
+.board-container table {
+  width: 100%;
+  height: 100%;
+}
+
+  .mines-count{
+    width: 170px;
+    background-color: #ac8a61;;
+    display: inline-block;
+    padding: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+  }
+
+  .restart-btn {
+    display: inline-block;
+    margin-bottom: 5px;
+    width: 80px;
+    height: 80px;
+    background-color: #ac8a61;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor:pointer;
+  }
+  .restart-btn:hover {
+    background-color:#886f51;
+  }
+  .restart-btn:active {
+    position:relative;
+    top:1px;
+  }
+
+  .timer {
+    width: 170px;
+    background-color: #ac8a61;;
+    display: inline-block;
+    padding: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+  }
+
+  .levelBtn {
+    width: 120px;
+    background-color: #ac8a61;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    cursor:pointer;
+  }
+  .levelBtn:hover {
+      background-color:#886f51;
+  }
+
+  .levelBtn:active {
+    position:relative;
+    top:1px;
+    }
+
+  .features-container{
+    display: flex;
+    height: 100px;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px;
+  }
+
+  .lives{
+    font-size: 50px;
+    display: flex;
+    float: left;
+    margin: auto;
+  }
+
+  .safe {
+    background-color:#ac8a61;
+    border-radius:14px;
+    border:1px solid black;
+    cursor:pointer;
+    color:black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:25px;
+    padding:8px 8px;
+    text-decoration:none;
+  }
+  .safe:hover {
+    background-color:#886f51;
+  }
+  .safe:active {
+    position:relative;
+    top:1px;
+  }
+
+  .game-over-modal {
+	  color:black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:25px;
+    margin-left: 8px;
+    margin-top: 100px;
+    display:inline-block;
+    border-radius: 30px;
+    width: 400px;
+    position: fixed;
+    background-image: url(../img/woodbackground2.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+.hide {
+  display: none;
+}
+
+.footer {
+  background-color: lightgrey;
+  opacity: 0.5;
+  padding: 10px;
+}

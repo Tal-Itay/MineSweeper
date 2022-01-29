@@ -11,15 +11,52 @@
 </head>
 
 <body onload="initGame()">
-    <!-- onkeyup="startTimer(event)" (?)later-->
 
     <h1>MineSweeper</h1>
 
-    <table>
-        <tbody class="board"></tbody>
-    </table>
+    <div class="info-container">
+        <div class="mines-count">Mines Left: <span></span></div>
+
+        <button onclick="restartGame(this)" class="restart-btn">🤨</button>
+
+        <div class="timer">
+            <label id="minutes">00</label>:<label id="seconds">00</label>
+        </div><br>
+
+        <button onclick="gameLevel(this)" class="levelBtn">Beginner</button>
+        <button onclick="gameLevel(this)" class="levelBtn">Medium</button>
+        <button onclick="gameLevel(this)" class="levelBtn">Expert</button>
+    </div>
+
+    <div class="board-container">
+        <table>
+            <tbody class="board"></tbody>
+        </table>
+    </div>
+
+    <div class="game-over-modal">
+        <h2>Game Over!</h2>
+    </div>
+
+    <div class="features-container">
+
+        <div class="lives"></div>
+        <div class="safe-click">
+            <button onclick="safeClick(this)" class="safe safe1">Safe Click</button>
+            <button onclick="safeClick(this)" class="safe safe2">Safe Click</button>
+            <button onclick="safeClick(this)" class="safe safe3">Safe Click</button>
+        </div>
+        <!-- <ul>            
+            <li onclick="hintClicked(this)" class="hints hint1">💡</li>
+            <li onclick="hintClicked(this)" class="hints hint2">💡</li>
+            <li onclick="hintClicked(this)" class="hints hint3">💡</li>
+        </ul> -->
+    </div>
 
 
+    <div class="footer">
+        coffeeright &copy; 2022 Tal Itay
+    </div>
 
 
     <script src="js/utils.js"></script>
