@@ -85,7 +85,7 @@ function initGame() {
     //cell color back
     document.querySelector('.board').style.backgroundColor = '#768d87';
     //background pic back
-    document.querySelector('body').style.backgroundImage = "url(..img/background3.jpeg)";
+    document.querySelector('body').style.backgroundImage = `url("../img/background3.jpeg")`;
 }
 
 
@@ -182,9 +182,8 @@ function cellClicked(elCell) {
             document.querySelector('.mines-count span').innerText = gMinesCountDown;
             elCell.style.backgroundColor = '#b3cfc8';
 
-            if (gLives === 0) {
-                gameOver(false);
-            }
+            if (gLives === 0) gameOver(false);
+
             //if not a mine and zero mines around:
         } else if (!cell.minesAroundCount) {
             expandShown(gBoard, i, j)
@@ -213,7 +212,8 @@ function cellMarked(elCell) {
         //model:
         cell.isMarked = true;
         gGame.markedCount++;
-        gMinesCountDown--
+        if (gMinesCountDown > 0) gMinesCountDown--
+
         // dom:
         elCell.innerText = FLAG;
         document.querySelector('.mines-count span').innerText = gMinesCountDown;
@@ -313,7 +313,7 @@ function gameOver(isWin) {
                 elCell.style.backgroundColor = '#b3cfc8';
             }
         }
-        document.querySelector('body').style.backgroundImage = "url(..img/burned4.jpeg)";
+        document.querySelector('body').style.backgroundImage = `url("../img/burned4.jpeg")`;
     }
 }
 
