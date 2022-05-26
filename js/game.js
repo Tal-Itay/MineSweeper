@@ -61,6 +61,7 @@ function initGame() {
   gHint = 3
 
   var elTimer = document.querySelector('.timer')
+  clearInterval(gTimerInterval)
   elTimer.innerHTML = '<label id="minutes">00</label>:<label id="seconds">00</label>'
   //hide modal
   var elEndGameModal = document.querySelector('.game-over-modal h2')
