@@ -47,7 +47,6 @@ var gMinutesLabel
 var gSecondsLabel
 var gTotalSeconds
 
-//TODO: split to util functions
 function initGame() {
   // console.log('hi');
   gBoard = buildBoard()
@@ -158,7 +157,6 @@ function firstClick(clickedPosition) {
   gIsFirstClick = false
 }
 
-//TODO: split to util function
 function cellClicked(elCell) {
   var cellIdx = getCellPos(elCell.id)
   var i = cellIdx.i
@@ -229,7 +227,6 @@ function cellMarked(elCell) {
   checkWin()
 }
 
-//TODO: split to util function - renderCell()
 function expandShown(board, rowIdx, colIdx) {
   for (var i = rowIdx - 1; i <= rowIdx + 1; i++) {
     if (i < 0 || i >= board.length) continue
@@ -261,24 +258,12 @@ function expandShown(board, rowIdx, colIdx) {
 function checkWin() {
   var mineAmount = gLevel.mines
   var remainingMines = mineAmount - (gLevel.lives - gLives)
-  // console.log({
-  //     mineAmount,
-  //     gLevel,
-  //     remainingMines,
-  //     gGame,
-  //     gLives
-  // });
+
   if (gGame.markedCount === remainingMines && gGame.shownCount === gLevel.size ** 2 - remainingMines) {
     gameOver(true)
   }
-  // if (glives === 0) {
-  //     gameOver(false)
-  // } else if (gGame.markedCount === remainingMines && gGame.shownCount === ((gLevel.size ** 2) - remainingMines)) {
-  //     gameOver(true);
-  // }
 }
 
-// TODO: split to util function
 function gameOver(isWin) {
   gGame.isOn = false
   clearInterval(gTimerInterval)
